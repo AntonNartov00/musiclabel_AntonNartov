@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using MusicLabel.Domain;
+using Xunit;
+namespace MusicLabel.Tests
+{
+    public class InterpretTests
+    {
+        [Fact]
+        public void InterpretTest()
+        {
+            string kuenstlername = "Eisvogel";
+            string genre = "Pop";
+            var interpret = new Interpret(kuenstlername, genre, 1200m);
+            Assert.Equal(kuenstlername, interpret.Kuenstlername);
+            Assert.Equal(genre, interpret.Genre);
+            Assert.Equal(1200m, interpret.Tagesgage);
+        }
+        [Fact]
+        public void BerechneGageTest()
+        {
+         var interpret = new Interpret("Eisvogel", "Pop", 1200m);
+            decimal berechneGage = interpret.BerechneGage(3);
+            Assert.Equal(berechneGage, 3600m);
+        }
+    }
+}
