@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using MusicLabel.Domain;
+using MusicLabel.Domain.Entities;
 using Xunit;
 namespace MusicLabel.Tests
 {
@@ -31,10 +31,5 @@ namespace MusicLabel.Tests
         {
             Assert.Throws<ArgumentException>(() => new Interpret("", "Pop", 1200m));
         }
-
-
-
-        
-
     }
 }

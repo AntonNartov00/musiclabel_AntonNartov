@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MusicLabel.Domain
+namespace MusicLabel.Domain.Entities
 {
 
     public static class Preisrechner

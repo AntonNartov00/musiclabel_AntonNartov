@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MusicLabel.Domain
+namespace MusicLabel.Domain.Entities
 {
     public class Interpret
     {
@@ -24,12 +24,11 @@ namespace MusicLabel.Domain
             {
                 throw new ArgumentException("Das Genre darf nicht leer sein.", nameof(genre));
             }
-            if(tagesgage <= 0)
+            if (tagesgage <= 0)
             {
                 throw new ArgumentOutOfRangeException("Die Tagesgage muss größer als 0 sein.", nameof(tagesgage));
             }
             
-
             Kuenstlername = kuenstlername;
             Genre = genre;
             Tagesgage = tagesgage;
@@ -42,7 +41,7 @@ namespace MusicLabel.Domain
         /// <returns></returns>
         public decimal BerechneGage(int tage)
         {
-            if(tage <= 0)
+            if (tage <= 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(tage), "Die Anzahl der Tage muss größer als 0 sein.");
             }

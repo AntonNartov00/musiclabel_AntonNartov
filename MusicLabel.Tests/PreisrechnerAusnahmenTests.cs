@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using MusicLabel.Domain;
+using MusicLabel.Domain.Entities;
 using Xunit;
 
 namespace MusicLabel.Tests
